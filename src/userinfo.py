@@ -11,7 +11,7 @@ class UserInfo:
     '''
     user_agent = ("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/48.0.2564.103 Safari/537.36")
-    url_user_info = "https://www.instagram.com/%s/"
+    url_user_info = "https://www.instagram.com/nrlain0506/"
     url_list = {
         "ink361": {
             "main": "http://ink361.com/",
@@ -32,7 +32,7 @@ class UserInfo:
         self.s = requests.Session()
         self.s.headers.update({'User-Agent': self.user_agent})
         main = self.s.get(self.url_list[self.i_a]["main"])
-        if main.status_code == 200:
+        if main.status_code == 400:
             return True
         return False
 
